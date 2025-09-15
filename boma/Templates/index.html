@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gravity Boma — Artifact</title>
+  <style>
+    :root{
+      --bg:#fafafa; 
+      --card:#ffffff; 
+      --accent:#8B4513;   /* earthy brown from logo */
+      --accent2:#C06014;  /* warm orange from logo */
+      --muted:#555;
+      --radius:14px; 
+      --pad:18px; 
+      --shadow: 0 6px 18px rgba(20,20,30,0.08);
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#111;line-height:1.5}
+    .container{max-width:900px;margin:28px auto;padding:16px}
+    .hero{border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+    .hero img.top-image{object-fit:cover;display:block}
+    header.brand{
+      display:flex;align-items:center;gap:14px;
+      margin-top:-60px; margin-left:20px;
+      background:rgba(255,255,255,0.9); padding:10px 14px; border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
+    .brand img{width:8%;height:8%;object-fit:contain}
+    .brand hgroup{line-height:1}
+    .brand .title{font-weight:700;font-size:20px;color:var(--accent)}
+    .brand .subtitle{font-size:12px;color:var(--muted);margin-top:4px}
+    main.card{
+      background:var(--card);border-radius:14px;padding:20px;margin-top:12px;
+      box-shadow:var(--shadow);
+    }
+    .artifact-name{font-size:22px;margin:4px 0 12px 0;color:var(--accent2)}
+    .desc{color:var(--muted);margin-bottom:20px}
+    .btn-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:600;
+      border:none;box-shadow:0 4px 12px rgba(20,20,30,0.08);
+      transition:transform .12s ease;
+    }
+    .btn:active{transform:translateY(1px)}
+    .btn.primary{background:var(--accent);color:white}
+    .btn.secondary{background:var(--accent2);color:white}
+    .btn.ghost{background:transparent;border:2px solid var(--accent);color:var(--accent)}
+    .related{display:grid;grid-template-columns:120px 1fr;gap:12px;margin-top:18px;align-items:center}
+    .related img{width:100%;height:100px;object-fit:cover;border-radius:8px}
+    .related .meta{font-weight:700;color:var(--accent)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <!-- Artifact image -->
+      <img class="top-image" src="../images/drums.png" alt="Traditional artifact photo">
+      
+      <!-- Logo + brand -->
+      <header class="brand">
+        <img src="../images/logo.png" alt="Gravity Boma logo">
+        <hgroup>
+          <div class="title">Gravity Boma</div>
+          <div class="subtitle">The Home of Kenyan Heritage</div>
+        </hgroup>
+      </header>
+
+      <!-- Info card -->
+      <main class="card">
+        <h1 class="artifact-name">Ngoma ya Kabila (Example Drum)</h1>
+        <p class="desc">
+          This traditional drum was used in ceremonies and dances. Its hide head and carved wooden body carry cultural meaning, 
+          symbolizing rhythm, identity, and communal celebration.
+        </p>
+
+        <!-- Hot buttons -->
+        <div class="btn-row">
+          <button class="btn primary" onclick="window.open('https://example.org','_blank')">Website</button>
+          <button class="btn secondary" onclick="alert('More on the people...')">More on the People</button>
+          <button class="btn ghost" onclick="document.getElementById('related').scrollIntoView({behavior:'smooth'})">Related Artifact</button>
+        </div>
+
+        <!-- Related artifact -->
+        <section id="related" style="margin-top:20px">
+          <div class="related">
+            <img src="../images/isukuti.png" alt="Related artifact">
+            <div>
+              <div class="meta">Related: Isukuti</div>
+              <p style="color:#555;font-size:14px">Played alongside the drum in communal songs and dances.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
